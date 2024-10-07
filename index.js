@@ -123,8 +123,8 @@ function createCartItem(productId, quantity) {
 </div>
 <div class="bottom">
   <p class="p">Cantidad: ${quantity}</p>
-  <button class="btn-decrease" data-id="${productId}"> - </button>
-  <button class="btn-increase" data-id="${productId}"> + </button>
+<button class="btn-decrease" data-id="${productId}"> - </button>
+<button class="btn-increase" data-id="${productId}"> + </button>
 </div>
 `;
 
@@ -274,30 +274,22 @@ function createOrderData(clientInfo) {
   };
 }
 
-function sendOrderData(orderData) {
+async function sendOrderData(orderData) {
   console.log(orderData);
 
-  fetch(ORDER_API_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    mode: 'no-cors',
-    body: JSON.stringify(orderData),
-  })
-    .then(response => {
-      if (response.ok) {
-        alert('Pedido realizado con éxito.');
-        clearCart();
-      } else {
-        response.text().then(text => {
-          console.error('Server response:', text);
-          alert('Error al realizar el pedido.');
-        });
-      }
-    })
-    .catch(error => {
-      console.error('Error submitting order:', error);
-      alert('Error al realizar el pedido.');
+  try {
+    await fetch(ORDER_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      mode: 'no-cors',
+      body: JSON.stringify(orderData),
     });
+
+    alert("good request")
+  } catch (error) {
+    alert("error fetching backend")
+    console.log("error: ", error)
+  }
 }
 
 function clearCart() {
