@@ -1,0 +1,117 @@
+.image {
+  border-radius: 4px;
+  max-width: 300px;
+  object-fit: cover;
+  flex-grow: 1;
+}
+
+.div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.card {
+  background: #1d1237;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 1rem;
+  display: flex;
+  flex-flow: row;
+  border-radius: 1rem;
+}
+
+body {
+  background: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    background: #1d1237;
+    padding: 1rem;
+    max-width: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-flow: column;
+    border-radius: 1rem;
+  }
+}
+
+.p {
+  color: white;
+  margin-left: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.h1 {
+  color: white;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+.h1c {
+  color: white;
+  font-size: 2rem;
+  margin-left: 1rem;
+  display: block;
+}
+
+.btn {
+  background: #b226d342;
+  padding: 1rem;
+  margin: 1rem;
+  display: block;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.final {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.input {
+  border-radius: 1rem;
+  background: #b226d342;
+  padding: 1rem;
+  margin: 1rem;
+  border-color: purple;
+  display: block;
+  outline: none;
+  color: white;
+}
+
+#submit-order-button {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: white;
+  border-radius: 1rem;
+  background: purple;
+}
+
+.btn-decrease {
+  background: #b226d342;
+  padding: 0.5rem;
+  margin: 1rem;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+}
+
+.btn-increase {
+  background: #b226d342;
+  padding: 0.5rem;
+  margin: 1rem;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+}
